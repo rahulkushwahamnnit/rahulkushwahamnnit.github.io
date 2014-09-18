@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Book Preview with BookBlock</title>
+		<meta name="description" content="Book Preview with BookBlock" />
+		<meta name="keywords" content="BookBlock, book preview, look inside, css, transforms, animations, css3, 3d, perspective, fullscreen" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="./favicon.ICO">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+        <div id="scroll-wrap" class="container">
+			<header class="codrops-header">
+				<h1>ELECTROMANIA<span><a href="http://www.avishkar2k14.in">AVISHKAR.14</a></span></h1>	
+			</header>
+			<div class="main">
+				<div id="bookshelf" class="bookshelf">
+					<figure>
+						<div class="book" data-book="book-1"></div>
+						<div class="buttons"><a href="#">Details</a><a href="#">About</a></div>
+						<figcaption>
+						  <h2>Embedded Design</h2></figcaption>
+						<div class="details">
+							<ul>
+								<li></li>
+								<li>Ever wondered what keeps on running this modern world. Well, a code embedded in a little black box is your answer.<li>Embedded design tests both your software and hardware skills.</li>
+								
+							</ul>
+						</div>
+					</figure>
+					<figure>
+						<div class="book" data-book="book-2"></div>
+						<div class="buttons"><a href="#">Details</a><a href="#">About</a></div>
+						<figcaption>
+						  <h2>FPGA </h2></figcaption>
+						<div class="details">
+							<ul>
+								<li></li>
+								<li>Do you feel like a lot of time is wasted building circuits. </li><li>FPGA provides you the platform to design complex circuits through hardware descriptive languages.</li>
+							</ul>
+						</div>
+					</figure>
+					<figure>
+						<div class="book" data-book="book-8"></div>
+						<div class="buttons"><a href="#">Details</a><a href="#">About</a></div>
+						<figcaption>
+						  <h2>Quintathlon</h2></figcaption>
+						<div class="details">
+							<ul>
+								<li></li>
+								<li>Face all the hurdles in the interview process and be prepared early on.</li>
+								
+							</ul>
+						</div>
+					</figure>
+					<figure>
+						<div class="book" data-book="book-3"></div>
+						<div class="buttons"><a href="#">Details</a><a href="#">About</a></div>
+						<figcaption>
+						  <h2>Livewire</h2></figcaption>
+						<div class="details">
+							<ul>
+								<li></li>
+								<li>Dive into the programmer's world and witness what it means to be a coder.</li>
+								
+							</ul>
+						</div>
+					</figure>
+					<figure>
+						<div class="book" data-book="book-4"></div>
+						<div class="buttons"><a href="#">Details</a><a href="#">About</a></div>
+						<figcaption>
+						  <h2>Impromptu </h2></figcaption>
+						<div class="details">
+							<ul>
+								<li></li>
+								<li>Think you are die-hard for tronix, it's time to get caught off guards to challenge it's practical aspects.</li>
+								
+							</ul>
+						</div>
+					</figure>
+					<figure>
+						<div class="book" data-book="book-5"></div>
+						<div class="buttons"><a href="#">Details</a><a href="#">About</a></div>
+						<figcaption>
+						  <h2>Sparkx </h2></figcaption>
+						<div class="details">
+							<ul>
+								<li></li>
+								<li>Genius is working on an idea which no one can dream of.</li><li>Who knows, it might be the next big thing this world needs.</li>
+							</ul>
+						</div>
+					</figure>
+					<figure>
+						<div class="book" data-book="book-6"></div>
+						<div class="buttons"><a href="#">Details</a><a href="#">About</a></div>
+						<figcaption>
+						  <h2>Combo Magic</h2></figcaption>
+						<div class="details">
+							<ul>
+								<li></li>
+								<li>Put your design skills into use and build an electronically designed game.</li>
+								
+							</ul>
+						</div>
+					</figure>
+					<figure>
+						<div class="book" data-book="book-7"></div>
+						<div class="buttons"><a href="#">Details</a><a href="#">About</a></div>
+						<figcaption>
+						  <h2>Neuron Twister </h2></figcaption>
+						<div class="details">
+							<ul>
+								<li></li>
+								<li>About the event</li>
+							</ul>
+						</div>
+					</figure>
+					<figure>
+						<div class="book" data-book="book-9"></div>
+						<div class="buttons"><a href="#">Details</a><a href="#">About</a></div>
+						<figcaption>
+						  <h2>COD </h2></figcaption>
+						<div class="details">
+							<ul>
+								<li></li>
+								<li>coming soon</li>
+							</ul>
+						</div>
+					</figure>
+				</div>
+			</div><!-- /main --></div><!-- /container -->
+
+		<!-- Fullscreen BookBlock -->
+		<!-- for demo purpose we repeat each bookblock -->
+		<div class="bb-custom-wrapper" id="book-1">
+			<div class="bb-bookblock">
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<div>
+							<h3><span>Description</span></h3>
+						</div>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+                    	<p style="text-align:justify;">Electronic circuits might have taken a long time to be invented but they certainly did not take long to make their presence felt in all walks of life. Technophile’s have interjected that we have a need for “Electronics” .The last few decades have seen an out and out dominance of the silicon and its prodigious applications from small toys, to high end mobile phones & tablets ; from attractive & sophisticated gadgets to state-of -the art satellites .These have become an integral part of our existence, without which it would be difficult to imagine our lives.<br><br>
+
+So, here comes the most awaited event of Electro-mania “Embedded Design” as the name suggests this  is an event to test your mettle in the field of Embedded Electronics. Which sets fire to your inquisitive spirits and intuitive mind in the field of  Electronics!!</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Problem Statement</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:center">Coming soon</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Event Format</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">There will be three rounds:<br><br>
+                                                         	        Round 1st- Abstract submission 
+					        <br>Round 2nd- Preliminary Round (For 2nd year only)
+                            <br>Round 3rd- final round 
+</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Rules and Regulations</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;"> 
+1.	There can be a maximum of 3 members in the same team. The members of the team need not be from the same institution. All members should be current students of a recognized educational institution. All teams and their members should register themselves online, failing which, their participation in the final rounds will not be considered.<br><br>
+2.	The competition shall consist of two rounds. The first round, also the preliminaries, will consist of the submission of an abstract that details the approach adopted by the team towards solving the problem and any progress made already. The abstract should clearly outline the following details:<br>
+<wbr>•	Team details (members and their institutions, contact details including phone numbers and email addresses of each member and team name).<br>
+ &nbsp;•	Brief introduction to the problem statement (to test your understanding of what is required).
+<br> &nbsp;•	Your approach towards solving the problem, including design decisions as well as technical details.
+<br> &nbsp;•	Work already completed (in which case a snapshot of current code is required).
+<br> &nbsp;•	Estimated time of completion.
+<br> &nbsp;•	Any other comments.<br>
+<br> &nbsp;3.	The final round of the competition will consist primarily of a presentation by the team, involving the following: 
+<br> &nbsp;•	Design decisions and implementation details.
+<br> &nbsp;•	Test run on the reference software.
+<br> &nbsp;•	A viva round.
+<br> &nbsp;•	Any other specific request made by the judges.
+</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Judging Criteria</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">1. Judging will be done by faculty members of Electronics department.<br>
+<br>2. Decision will be final and binding to all participants.<br>
+
+<br>3. The teams will be awarded points on the following aspects:<br><br> 
+
+ &nbsp; &nbsp;•	Design decisions and implementation.<br>
+ &nbsp; &nbsp;•	Presentation and viva.<br>
+ &nbsp; &nbsp;•	Additional points for extra features.<br>
+ &nbsp; &nbsp;•	Additional points for cost effectiveness.
+</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Coordinators</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p>1.  Prateek Omer<br>
+                       	<br>2.  Mayank Shukla<br>
+                        <br>3.  Prateek Gupta<br>
+                       	<br>4.  Pinki Khedar<br>
+                        <br>5.  Prakhar Singhal<br>
+                        <br>6.  Alisha Oshin Ekka</p>
+					</div>
+				</div>			
+            </div><!-- /bb-bookblock -->
+			<nav>
+				<a href="#" class="bb-nav-prev">Previous</a>
+				<a href="#" class="bb-nav-next">Next</a>
+				<a href="#" class="bb-nav-close">Close</a>
+			</nav>
+		</div><!-- /bb-custom-wrapper -->
+		
+        
+        <div class="bb-custom-wrapper" id="book-2">
+			<div class="bb-bookblock">
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<div>
+							<h3><span>Description</span></h3>
+						</div>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+                    	<p style="text-align:justify;">“We cannot solve our problem with the same thinking,
+We used when we created them”
+<br><br><br>No need to manually place gates and transistors to build electronic circuits. Electromania presents FPGA Design Challenge, for the electronic elite, who love to unravel the mysterious of the black box!
+<br><br>Design complex circuits at an abstract level in terms of functionality and data flow by implementing those circuits in HDLs. ASIC prototyping with fpgas enables fast and accurate soc system modeling and verification as well as accelerated software and firmware development.
+<br><br>Field Programmable Gate Arrays (FPGAs) are integrated circuits designed to be configured by the designer after manufacturing.
+FPGA Design Contest requires one to write the code for the given problem statement in either VHDL or Verilog and optimize it, then dump the code on the FPGA Kit to physically realize the design that was coded.
+So come and experience the dynamic energy in this offbeat synopsis of challenge</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Problem Statement</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:center">Coming soon</p>
+					</div>
+				</div>
+               
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Rules and Regulations</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">1. There can be a maximum of 3 members in the same team. The members of the team need not be from the same institution. All members should be current students of a recognized educational institution. All teams and their members should register themselves failing which, their participation in the final rounds will not be considered.
+<br><br>2. The competition will consist of two rounds.
+<br><br>3. The first round, the preliminaries, will consist of the submission of an abstract that details the approach adopted by the team towards solving the problem and any progress made already. The abstract should clearly outline the following details:
+<br> &nbsp;o Team details (members and their institutions, contact details including phone numbers and email addresses of each member and team name).
+<br> &nbsp;o Brief introduction to the problem statement (to test your understanding of what is required).
+<br> &nbsp;o Your approach towards solving the problem, including design decisions as well as technical details.
+<br> &nbsp;o Work already completed (in which case a snapshot of current code is required).
+<br> &nbsp;o Any other comments.
+<br><br>4. The final round of the competition will consist primarily of a presentation by the team, involving the following:
+<br> &nbsp;o Design decisions and implementation details.
+<br> &nbsp;o A test run on the reference software simulator and on the kit.
+<br> &nbsp;o A viva round.
+<br> &nbsp;o Any other specific request made by the judges.
+<br><br>5. Any kind of plagiary will lead to disqualification from event.</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Judging Criteria</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull; Judging will be done by faculty members of Electronics & Communication Engineering Department.
+<br><br>&bull; The teams will be awarded points on the following aspects by the judges:<br>
+<br> &nbsp; &nbsp;o Design decisions and implementation.
+<br> &nbsp; &nbsp;o Area used (no. of LUTs)..
+<br> &nbsp; &nbsp;o Presentation and viva.
+<br> &nbsp; &nbsp;o Additional points.
+
+<br><br>Any kind of additional features will be appreciated and will be awarded accordingly.</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Coordinators</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">Prateek Gupta<br>&nbsp;&nbsp;prateekgupta2100@gmail.com<br>&nbsp;&nbsp;+91-7800464699
+                       <br><br>Saurabh Thakur<br>&nbsp;&nbsp;mail2saurabh93@gmail.com<br>&nbsp;&nbsp;+91-9634242627
+                       <br><br>Arshad Ali<br>&nbsp;&nbsp;ali.arshadmnnit@gmail.com<br>&nbsp;&nbsp;+91-9457688396
+                       <br><br>Ankur Gupta<br>&nbsp;&nbsp;ankurgptgupta@gmail.com<br>&nbsp;&nbsp;+91-8765622680
+                       <br><br>Bhavya Dwivedi<br>&nbsp;&nbsp;bhavya.dwivedi.mnnit@gmail.com</p>
+					</div>
+				</div>
+			</div><!-- /bb-bookblock -->
+			<nav>
+				<a href="#" class="bb-nav-prev">Previous</a>
+				<a href="#" class="bb-nav-next">Next</a>
+				<a href="#" class="bb-nav-close">Close</a>
+			</nav>
+		</div><!-- /bb-custom-wrapper -->
+		
+        <div class="bb-custom-wrapper" id="book-3">
+			<div class="bb-bookblock">
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<div>
+							<h3><span>Description</span></h3>
+						</div>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+                    	<p style="text-align:justify;">“Talk is cheap. Show me the code”
+<br><br><br>It’s time to use all the experience of the uncountable sleepless nights you had & burn the midnight oil in a race against time to beat your fellow night walkers. Solve as many problems as you can before others and become ultimate creature of the night.
+<br><br>Engage your programming faculties in the ultimate nocturnal coding challenge of all. The event will take you into the world of programming involving assembly, hardware description language and circuitry. Accuracy, speed, & a bit of programming skills in different languages are the basic requirements.
+</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Problem Statement</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:center">Coming soon</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Event Format</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull;	It consist of 2 rounds:
+<br><br> &nbsp;a.	Elimination Round (Only for MNNITians): Written paper based on C, C++,OS & CN.
+<br><br> &nbsp;b.	Final Round: On Spot Coding Round (5-6 Hrs).
+
+<br><br><br>&bull;	Final Round consists of 3 Parts:
+<br><br> &nbsp;a.	Part 1: Programming Problem Statements. (Compulsory for 1st, 2nd, 3rd Yrs.)
+<br><br> &nbsp;b.	Part 2: MATLAB & MICROPROCESSOR (8085) Problem Statements.
+
+<br><br><br>&bull;	The time limit for every part may be different.
+</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Rules and Regulations</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull;	Each team shall comprise a maximum of three participants.
+<br><br>&bull;	The contestants can be students pursuing undergraduate studies in any recognized University across the globe.
+<br><br>&bull;	Students from different years may pool together to form a team. However, for evaluation 
+purposes, the team shall be deemed at par with the team composed entirely of the same year as that of the most senior participant in such a team.
+<br><br>&bull;	Branches allowed for the competition are “Electronics & Communication” and “Electrical Engineering” Only.
+<br><br>&bull;	There is no restriction on using programming languages in FINAL round. You can prefer any language you want whether it’s C, C++ or Java.
+<br><br>&bull;	The time limit bindings may change during the event.
+<br><br>&bull;	In the unlikely event of a dispute or disagreement, the coordinators’ word shall be final and binding.
+<br><br>&bull;	Resorting to unfair means at any stage of the event is highly discouraged and will result in instant disqualification from ELECTROMANIA 2014.
+</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Judging Criteria</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull;	The order of criteria of evaluation will be:
+<br><br>&nbsp;&nbsp;a.	Number of test cases executed successfully.
+<br>&nbsp;&nbsp;b.	Runtime of the code.
+<br>&nbsp;&nbsp;c.	Memory used by your code.
+<br><br>&bull;	The coordinators’ evaluation will be final & binding. No arguments in this regard will be entertained.
+</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Coordinators</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull; Prateek Bansal<br>&nbsp;&nbsp;prateek134@gmail.com<br>&nbsp;&nbsp;7275558438		
+<br><br>&bull; Pankaj Yadav<br>&nbsp;&nbsp;pankajyadavas@gmail.com<br>&nbsp;&nbsp;7524962538
+<br><br>&bull; Priyam Pandey<br>&nbsp;&nbsp;priyampandey9575@gmail.com<br>&nbsp;&nbsp;8090555789 
+<br><br>&bull; Pritesh Narkhede<br>&nbsp;&nbsp;priteshnarkhede7@gmail.com<br>&nbsp;&nbsp;9198707155 
+<br><br>&bull; Saumya Khanna<br>&nbsp;&nbsp;saumya.khanna23@gmail.com
+</p>
+					</div>
+				</div>
+			</div><!-- /bb-bookblock -->
+			<nav>
+				<a href="#" class="bb-nav-prev">Previous</a>
+				<a href="#" class="bb-nav-next">Next</a>
+				<a href="#" class="bb-nav-close">Close</a>
+			</nav>
+		</div><!-- /bb-custom-wrapper -->
+        
+        <div class="bb-custom-wrapper" id="book-4">
+			<div class="bb-bookblock">
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<div>
+							<h3><span>Description</span></h3>
+						</div>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+                    	<p style="text-align:justify;">"Acclimation leads to Brilliance"
+                        <br><br><br>IMPROMPTU is back again to throttle your nerves, possibilities are infinite, you have to explore them.Think you are die-hard for tronix, it's time to get caught off guards to challenge it's practical aspects.Brace yourselves for the thrilling experience of On Spot Circuit Designing a.k.a. OSCD. So guys, be ready and get loaded for an event which will test your technical as well as competitive skills.</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Problem Statement</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:center">Coming soon</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Event Format</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">OSCD  will comprise of 3 rounds.
+<br><br>Round 1: Technical Exam
+<br>This will be a written elimination round consisting of questions (MCQs and Subjective) related to electronic fundamentals and hardware.
+<br>&nbsp;• Question sheets will be provided to the registered teams on a particular time.
+<br>&nbsp;• They will have 2 hours to solve the questions and submit the answer sheets.
+<br>&nbsp;• Answers have to be written on the same sheet.
+<br>&nbsp;• There may be negative marking in some questions. Details will be specified in question sheet.
+<br>&nbsp;• Selected teams will have to report for the next round.
+<br><br><br>Round 2: Technical Interview 
+<br>Teams that will qualify after the first round will be judged on the basis of Technical 
+Interview. This will also be an elimination round. 
+
+<br><br><br>Round 3: On Spot Circuit Design
+<br>This is the final round in which set of components will be given to the qualified teams according to the tasks and they have to design a working circuit with them.
+<br>&nbsp;•	All the components and required material will be provided to the teams.
+<br>&nbsp;•	All teams will be having same kit of components.
+<br>&nbsp;•	A total of 3 hours will be given to each team.
+<br>&nbsp;•	You must design the circuit by using the components provided by us. You may not use any other component/material however in case something got damaged you may request the organizer to replace the components/parts.
+<br>&nbsp;•	Teams should draw circuit diagram of the application depicting all the principles and theories involved in circuit as well as the working of the application on a sheet.
+<br>&nbsp;•	Submitting the application/kits early will benefit the team as time bonus.
+<br>&nbsp;•	Time bonus will be considered for tie-breaking between two or more teams.
+
+
+</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Rules and Regulations</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">•	For 1st year,
+<br>&nbsp;&nbsp;no. of members : THREE (any branch with atleast one member from ECE branch)
+<br><br>•	For 2nd year and 3rd year, 
+		<br>&nbsp;&nbsp;no. of members : TWO (branches allowed : ECE and EE atleast one member from ECE)
+<br><br>•	There will be total 3 rounds.
+<br><br>•	First and second round will be elimination rounds.
+<br><br>•	Final round will be a circuit designing round.
+<br><br>•	All the rounds are open in nature, means you will be provided question sheets/components on the registration desk and you need to submit them back within the specified time limit.
+<br><br>•	All the components and material required for the circuit will be provided by us.
+<br><br>•	Power supply and other testing devices like multimeter, CRO (if needed) and other tools will be made available in Electronics Lab.
+</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Judging Criteria</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">Teams will be judged by the faculty members of Electronics & Communication Department and Electromania coordinators according to the following criteria:
+<br><br><br>    1st year 
+<br>&bull;	Amount of task completed.
+<br>&bull;	Approach skills.
+<br>&bull;	Viva.
+
+<br><br>    2nd & 3rd year
+<br>• Design of circuit. 
+<br>• Compactness of design. 
+<br>• Desired output. 
+<br>• Exploration of concepts/theories.
+<br>• Breadboarding skills/neatness of the implemented circuit. 
+
+<br><br><br>NOTE:  Judges decision will be final and any kind of unfair means and plagiary will lead to disqualification from Electromania 2k14.
+</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Coordinators</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull;	Shashank Baranwal<br>&nbsp;&nbsp;baranwal.shashank4@gmail.com<br>&nbsp;&nbsp;7376847210
+ <br><br>&bull;	Nitish Prakash<br>&nbsp;&nbsp;nprakash0826@gmail.com<br>&nbsp;&nbsp;7376380699
+ <br><br>&bull;	Priyank Kr Bisen<br>&nbsp;&nbsp;priyankbisen94@gmail.com<br>&nbsp;&nbsp;7275867681
+ <br><br>&bull;	Tarun Kr. Gupta<br>&nbsp;&nbsp;tarunnarayan8@gmail.com<br>&nbsp;&nbsp;9651540302
+ <br><br>&bull;	Garvita Gupta<br>&nbsp;&nbsp;garvita93@gmail.com
+</p>
+					</div>
+				</div>
+			</div><!-- /bb-bookblock -->
+			<nav>
+				<a href="#" class="bb-nav-prev">Previous</a>
+				<a href="#" class="bb-nav-next">Next</a>
+				<a href="#" class="bb-nav-close">Close</a>
+			</nav>
+		</div><!-- /bb-custom-wrapper -->
+        
+        <div class="bb-custom-wrapper" id="book-5">
+			<div class="bb-bookblock">
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<div>
+							<h3><span>Description</span></h3>
+						</div>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+                    	<p style="text-align:justify;">“All the forces in World are not so powerful as an idea whose time has come.” – Victor Hugo
+<br><br><br>Sparkx and Avishkar invites all Tech enthusiasts to present their idea which can make this world a better place to live in. Don’t just dream of an idea, fight against all odds to bring your idea to life, who knows you might have a next million dollar idea, sometimes simplest ideas can be proved most effective. Genius is about creating ideas no one even imagined. Sparkx provides you the breeding ground of insane innovations and revolutionary ideas, a platform to bring out genius inside you.
+<br><br>Sparkx is a paper presentation contest, paper to be presented should be based on original work/idea and directed to or based on some electrical or electronics phenomenon. Think long and hard and send us your entry at sparks.avishkar2k14@gmail.com</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Problem Statement</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:center">Coming soon</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Event Format</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">Round 1: Abstract Submission
+<br><br>The abstract of not more than 300 words describing the idea, work done and brief results and finding need to be submitted electronically at sparkx.avishkar2k14 @gmail.com with subject “Team Name-Abstract Submission”. Abstract must be submitted in .doc and .pdf format. Selection for next round will be done on basis of originality of idea.
+ <br><br><br>Round 2: Full Paper Submission
+<br><br>Teams selected for this round need to send their full paper in IEEE two column format at sparkx.avishkar2k14@gmail.com with subject “Team Name-Full Paper Submission”. Paper must be submitted in .doc and .pdf format. Selection for next round will be done on basis of originality, feasibility and implementation of idea.
+<br><br><br>Final Round: Idea Presentation
+<br><br>Teams selected for the final round need to present their idea during Avishkar. More information will be conveyed later. Decisions of judges would be final and binding.</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Rules and Regulations</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull; The competition is open to undergraduate students only.
+<br><br>&bull; No student can be an author of more than one participating paper.
+<br><br>&bull; A team can have members from different colleges.
+<br><br>&bull; A team can have maximum four members.
+<br><br>&bull; Papers accepted by IEEE or any other equivalent association are not allowed.
+<br><br>&bull; Idea/Projects must be your own, project work done as an intern under someone else is not allowed.</p>
+					</div>
+				</div>
+				
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Coordinators</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull; Shubham Sharma<br>&nbsp;&nbsp;+91 8923829612<br>&nbsp;&nbsp;shubhamsharma.mnnit@gmail.com
+<br><br>&bull; Prateek Omer<br>&nbsp;&nbsp;8765379512<br>&nbsp;&nbsp;prat.prateeek@gmail.com
+<br><br>&bull; Himanshu Kumar<br>&nbsp;&nbsp;9651548172<br>&nbsp;&nbsp;himanshukr52@gmail.com
+<br><br>&bull; Alisha Oshin Ekka<br>&nbsp;&nbsp;oshinekka@gmail.com</p>
+					</div>
+				</div>
+			</div><!-- /bb-bookblock -->
+			<nav>
+				<a href="#" class="bb-nav-prev">Previous</a>
+				<a href="#" class="bb-nav-next">Next</a>
+				<a href="#" class="bb-nav-close">Close</a>
+			</nav>
+		</div><!-- /bb-custom-wrapper -->
+        
+        <div class="bb-custom-wrapper" id="book-6">
+			<div class="bb-bookblock">
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<div>
+							<h3><span>About</span></h3>
+						</div>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+                    	<p style="text-align:justify;">“Magic is not all Illusion, It is Application!”
+<br><br><br>Step out from the realms of theoretical learning and experience the cumulative
+effect of your creativity and knowledge producing a sheer magical delight. It is
+time to apply your skills and excitement of circuit design to produce something
+amazing, something worth putting effort in! So, gear up. Your passion and
+mettle will be tested.</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Problem Statement</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">The problem requires the design of a Single Player Shooter Game. It will be
+played on an LED matrix. The circuit must be designed without using any
+Programmable device.</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Detailed Description</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">The arena consists of an LED matrix. At one end there will be the Terminator.
+Zombies will enter the arena from the other end (min. 4 in a row and randomly)
+and will move down the arena (upto 3 rows of LED matrix). You have to
+generate a 4 bit(atleast) random number sequence. This number is used as
+position of zombies in first row.Now after every clock pulse these positions will
+shift to the row below, up to 3 rows (min) and the topmost row will be taken by
+a new number generated .The position of the terminator can be controlled by
+buttons representing Left and Right keys. Function of the terminator is to kill
+the zombies. This you can do by clearing the LED which is in front of the
+shooter position as fast as possible. If zombies succeed in crossing the lowest
+row (atleast 3) then, the game will terminate. This will be indicated by a red
+indiactor LED. If after a certain interval of time, no zombies are able to cross
+the last row then a green indicator LED will be glown.
+<br><br><br>Add Ons:
+<br><br>Following features in your design can fetch you extra points and will be used to
+resolve ties.
+<br>&bull; Randomness in the zombies position in the first row.
+<br>&bull; Make an alarm bell ring when the indicator LED turns red.
+<br>&bull; Bigger size of LED matrix. (min 4X3).</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Rules and Regulations</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull; This is a team event and is Exclusively for 1st and 2nd year.
+<br><br>&bull; Use of any programmable device is strictly prohibited.
+<br><br>&bull; A team can consists of maximum of 3 memebers (and atleast one of
+which must belong to Electrical or ECE branch).
+<br><br>&bull; Decision of Judges will be final and binding.
+<br><br>&bull; Abstract Submission:<br>&nbsp;&nbsp; An abstract in the form of powerpoint presentation
+must be submiited by the participating teams. The abstract must contain
+the basic understanding of the problem statement along with an
+approximate solution.</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Judging Criteria</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull;Teams must solve the basic problem satisfactorily for being considered. Add
+ons are not necessary and will be considered only for tie breaks.
+<br><br>&bull; Simplicity of algorithm is appreciated.
+<br><br>&bull; Judging will be done by faculty members and coordinators of ECE
+department.</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Coordinators</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull; Nitish Prakash<br>&nbsp;&nbsp;nprakash0826@gmail.com<br>&nbsp;&nbsp;7376380699
+<br><br>&bull; Priyank Kumar Bisen<br>&nbsp;&nbsp;priyankbisen94@gmail.com<br>&nbsp;&nbsp;7275867681
+<br><br>&bull; Saurabh Thakur<br>&nbsp;&nbsp;mail2saurabh93@gmail.com<br>&nbsp;&nbsp;9634242627
+<br><br>&bull; Wanya Kumar<br>&nbsp;&nbsp;kumarwanya@gmail.com
+<br><br>&bull; Megha Aggarwal<br>&nbsp;&nbsp;maggarwal1908@gmail.com</p>
+					</div>
+				</div>
+			</div><!-- /bb-bookblock -->
+			<nav>
+				<a href="#" class="bb-nav-prev">Previous</a>
+				<a href="#" class="bb-nav-next">Next</a>
+				<a href="#" class="bb-nav-close">Close</a>
+			</nav>
+		</div><!-- /bb-custom-wrapper -->
+        
+        <div class="bb-custom-wrapper" id="book-7">
+			<div class="bb-bookblock">
+				
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Problem Statement</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:center">Coming soon</p>
+					</div>
+				</div>
+                
+                
+				
+                
+			</div><!-- /bb-bookblock -->
+			<nav>
+				<a href="#" class="bb-nav-prev">Previous</a>
+				<a href="#" class="bb-nav-next">Next</a>
+				<a href="#" class="bb-nav-close">Close</a>
+			</nav>
+		</div><!-- /bb-custom-wrapper -->
+        
+        <div class="bb-custom-wrapper" id="book-8">
+			<div class="bb-bookblock">
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<div>
+							<h3><span>Description</span></h3>
+						</div>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+                    	<p style="text-align:justify;">Engineering is nothing but developed perception, interpreted intent; 
+common sense rounded out and minutely articulated.
+
+<br><br><br>A five round conniption to assay your cognitive rationale and expose you to the plethoric terrene of electronics.
+<br><br>A perfect platform to showcase your adroitness in the purlieu of the high functioning ingenious minds and proclaim the foremost reward !
+<br><br>So come and witness the dynamic energy of this nerve-wracking tournament in this unorthodox epitome of challenge.</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Problem Statement</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:center">Coming soon</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Event Format</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">The Quintathlon is a mega five-round event that simulates placement scenario and judges all aspects of your personality as a technocrat and as an engineer.
+
+<br><br><br>Round 1: 
+<br>Written Round, Objective: 
+
+<br>Questions on General and verbal aptitude, electrical, electronics and software skills followed by finite number of options to choose from. The objective of this round is to screen participants for further rounds.
+
+<br><br>Round 2: 
+<br>Written Round, Subjective:
+
+<br>Questions that would require elaborate explanation or numerical calculations, analytical skills such as data interpretation, puzzles and program codes/algorithms would be asked to test basic concepts of electronics engineering.
+
+
+<br><br>Round 3: 
+<br>Surprise Round:
+
+<br>Perhaps, the most happening and interesting round of Quintathlon & Electromania! And as the name suggests, the final details planned for this round would be disclosed on the spot.
+
+
+<br><br>Round 4:
+<br>Group Discussion :
+
+<br>Any placement scenario would be incomplete without a group discussion. The normal format for the group discussion as followed by most companies for placement would be followed.
+
+
+<br><br>Round 5: 
+<br>Personal/Panel Interview: 
+
+<br>The personal interview would include both the Technical and HR interview of the selected candidates.</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Rules and Regulations</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull;	This would be an individual event.
+<br><br>&bull;	The participant can be any student pursuing undergraduate studies in any recognized University across the globe.
+<br><br>&bull;	For 2nd& 3rd year, only Electronics branch are allowed, however all first year students, can participate in the event, regardless of their branch.
+<br><br>&bull;	All rounds are elimination rounds.
+<br><br>&bull;	Decision of organizers/co-ordinators would be final and binding.
+<br><br>&bull;	Date, Time & Venue for respective rounds will be declared a few days before that round.
+<br><br>&bull;	Any kind of plagiary or use of unfair means in any round is highly discouraged & will lead to immediate disqualification from QUNTATHLON 2014.
+<br><br>&bull;	All the communications shall be made through tinyurl.com/electromania2k14 .
+<br><br>&bull;	Stay tuned to https://www.facebook.com/electromania2k14 for further updates.</p>
+					</div>
+				</div>
+				<div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Judging Criteria</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						<p style="text-align:justify;">&bull;	There will be separate question papers & judging criteria for all three years.
+<br><br>&bull;	Number of candidates to be selected for next round will depend on number of factors like aggregate cut-off, maximum marks scored, etc.
+<br><br>&bull;	Test instructions will be communicated on the spot.
+<br><br>&bull;	Tie-breaks will be based on the number of wrong answers.
+<br><br>&bull;	The decision of coordinators will be final & binding, it cannot be challenged by any manner or means.
+<br><br>&bull;	All efforts will be made to make the whole event transparent and fair</p>
+					</div>
+				</div>
+                <div class="bb-item">
+					<div class="bb-custom-side page-layout-1">
+						<h3>
+							<span>Coordinators</span>
+						</h3>
+					</div>
+					<div class="bb-custom-side page-layout-1">
+						    <p style="text-align:justify;">&bull; Ankur Gupta<br>&nbsp;&nbsp;ankurgptgupta@gmail.com<br>&nbsp;&nbsp;+91-8765622680
+                           <br><br>&bull; Prateek Bansal<br>&nbsp;&nbsp;prateek134@gmail.com<br>&nbsp;&nbsp;+91-7275558438
+                           <br><br>&bull; Nayan Bansal<br>&nbsp;&nbsp;nayanbansal73@gmail.com<br>&nbsp;&nbsp;+91-9557626788
+                           <br><br>&bull; Abhimanyu Kakkar<br>&nbsp;&nbsp;abhimanyukakkar98@gmail.com<br>&nbsp;&nbsp;+91-9935055700
+                           <br><br>&bull; Smriti Gupta<br>&nbsp;&nbsp;smriti1592@gmail.com
+                           <br><br>&bull; Deeksha Gupta<br>&nbsp;&nbsp;deeksha.gupta.001@gmail.com</p>
+					</div>
+				</div>
+			</div><!-- /bb-bookblock -->
+			<nav>
+				<a href="#" class="bb-nav-prev">Previous</a>
+				<a href="#" class="bb-nav-next">Next</a>
+				<a href="#" class="bb-nav-close">Close</a>
+			</nav>
+		</div><!-- /bb-custom-wrapper -->
+        
+        <div class="bb-custom-wrapper" id="book-9">
+			<div class="bb-bookblock">
+							</div><!-- /bb-bookblock -->
+			<nav>
+				<a href="#" class="bb-nav-prev">Previous</a>
+				<a href="#" class="bb-nav-next">Next</a>
+				<a href="#" class="bb-nav-close">Close</a>
+			</nav>
+		</div><!-- /bb-custom-wrapper -->	
+		
+		<script src="js/bookblock.min.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/bookshelf.js"></script>
+	</body>
+</html>

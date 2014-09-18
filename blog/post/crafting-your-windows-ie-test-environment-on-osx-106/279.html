@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+<!-- Mirrored from union.co/blog/post/crafting-your-windows-ie-test-environment-on-osx-106/279 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Sep 2014 19:16:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8" />
+    <title>Crafting Your Windows / IE Test Environment on OSX 10.6 | Blog | Union</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=0, width=device-width" />
+    <meta name="description" content="Perspectives, updates and trends on the digital marketing industry for the team at UNION.">
+<!--
+
+      made with ♥ by...
+      _   _  _  _  _   ___   _  _
+     | | | || \| || | / ⁔ \ | \| |
+     | |_| || .` || |( (_) )| .` |
+      \___/ |_|\_||_| \___/ |_|\_|
+                          union.co
+
+-->
+    <meta property="og:url" content="279.html">
+    <meta property="og:title" content="Crafting Your Windows / IE Test Environment on OSX 10.6 | Blog | Union">
+    <meta property="og:description" content="Perspectives, updates and trends on the digital marketing industry for the team at UNION.">
+    <meta property="og:image" content="../../../../union.co.s3.amazonaws.com/content/blog/1396976617.94d231c0db92524c8a00c6f589ecbe8f.jpg" />
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="../../../apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="../../../apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="../../../apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="../../../apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="../../../apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="../../../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="../../../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="../../../apple-touch-icon-152x152.png" />
+<link rel="icon" sizes="196x196" type="image/png" href="../../../favicon-196x196.png" />
+<link rel="icon" sizes="160x160" type="image/png" href="../../../favicon-160x160.png" />
+<link rel="icon" sizes="96x96" type="image/png" href="../../../favicon-96x96.png" />
+<link rel="icon" sizes="32x32" type="image/png" href="../../../favicon-32x32.png" />
+<link rel="icon" sizes="16x16" type="image/png" href="../../../favicon-16x16.png" />
+<meta name="msapplication-TileColor" content="#3e3e3c" />
+<meta name="msapplication-TileImage" content="../../../mstile-144x144.png" />	<script type="text/javascript" src="../../../../use.typekit.net/gdy2hcy.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<link rel="stylesheet" href="../../../assets/css/screen.min.1409940258.css">
+
+	<script src="../../../assets/js/vendor/modernizr.custom.min.1408530321.js"></script>
+	<script src="../../../assets/js/vendor/snap-svg.min.1409940258.js"></script>
+
+	<!--[if lt IE 9]>
+        <script src="http://union.co/assets/js/vendor/html5shiv-3.7.0.min.js"></script>
+        <script src="http://union.co/assets/js/vendor/respond-1.4.2.min.js"></script>
+    <![endif]-->
+
+	<script>
+	window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+	window.analytics.load("0flr6baltt");
+	window.analytics.page();
+	</script>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53304205-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+    var _ss = _ss || [];
+    _ss.push(['_setDomain', 'https://koi-J7UCQM.sharpspring.com/net']);
+    _ss.push(['_setAccount', 'KOI-OKO1H0']);
+    _ss.push(['_trackPageView']);
+    (function() {
+       var ss = document.createElement('script');
+       ss.type = 'text/javascript'; ss.async = true;
+       ss.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'koi-J7UCQM.sharpspring.com/client/ss.js?ver=1.1.1';
+       var scr = document.getElementsByTagName('script')[0];
+       scr.parentNode.insertBefore(ss, scr);
+    })();
+    </script>
+</head>
+<body class="page-blog-post has-alert">
+
+	<div class="pace pace-inactive" style="z-index: 99990;"></div>
+
+	<!--[if lt IE 8]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="alert-bar reminder">
+        <div class="container">
+            <div class="studiobanks" title="Studiobanks"></div> is now
+            <div class="union" title="Union"></div><a href="../we-are-union/363.html" class="more">Read the Announcement &raquo;</a>
+            <span class="fa fa-times close" data-close></span>
+        </div>
+    </div>
+
+
+	<div class="masthead">
+    <div class="brand">
+        <a href="../../../index.html" class="inlinesvg-fallback logo-union" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="62" height="12" viewBox="-23 41 110 22" enable-background="new -23 41 110 22"><path class="bolt" fill="#EF3C51" d="M56.8 62.2l5.3-9.3c.3-.5.3-1.2 0-1.7l-5.3-9.3c-.2-.5-.9-.9-1.4-.9H44.8c-.5 0-1.2.4-1.4.8L38 51.2c-.3.5-.3 1.2 0 1.7l5.3 9.3c.3.5.9.8 1.4.8h10.7c.5 0 1.2-.4 1.4-.8zM45.2 51.9c0-2.7 2.2-5 4.9-5s4.9 2.2 4.9 5-2.2 5-4.9 5-4.9-2.2-4.9-5z"/><path class="letter" fill="#61625F" d="M-9.8 57.8h-6.1V41H-23v18c0 2.2 2.3 4 5.1 4h10c2.9 0 5.1-1.7 5.1-4V41h-7.1l.1 16.8zM80.1 41v11.3L71.4 41h-6.7v22h6.9V51.7L80.3 63H87V41h-6.9zM16.7 52.3L8 41H1.3v22h6.9V51.7L16.9 63h6.7V41h-6.9v11.3zM28.2 63h7.1V41h-7.1v22z"/></svg>        </a>
+    </div>
+    <a href="#" class="menu-trigger" tabindex="-1" ><span class="before"></span><span class="main">Menu</span><span class="after"></span></a>
+</div>
+
+	<div id="main" class="st-content">
+		<div class="st-content-inner">
+			<div class="tmp_header">
+				<div class="page-row m_jumbotron">
+    <img src="../../../../union.co.s3.amazonaws.com/content/blog/1396976617.94d231c0db92524c8a00c6f589ecbe8f.jpg" alt="">
+</div>
+			</div>
+			<div class="tmp_content">
+				<div class="page-col">
+    <div class="post-detail">
+        <div class="row post-date-title">
+    <div class="col span3">
+        <div class="post-date">
+            <span class="post-month">Mar</span>
+            
+                <span class="post-day">2012</span>
+                    </div>
+    </div>
+    <div class="col span9">
+        <h1 class="post-title">
+            <a href="279.html">
+                Crafting Your Windows / IE Test Environment on OSX 10.6            </a>
+        </h1>
+    </div>
+</div>        <div class="row post-content">
+            <div class="col span3">
+                <div class="post-category-author">
+    <span class="post-category">
+        In <a href="../../category/tutorials/3.html">Tutorials</a>
+    </span>
+    <span class="post-author">
+        by
+        <a href="../../author/union/1.html" class="post-author-name">
+            Union        </a>
+    </span>
+    <span class="post-author-avatar">
+        <a href="../../author/union/1.html">
+            <svg class="clip-hex" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="150px" height="168px" viewBox="0 0 150 168" xml:space="preserve">
+    <defs>
+        <clipPath id="hex-510614782">
+             <path d="M143.407,129.599c3.061-1.767,5.565-6.105,5.565-9.639V47.426c0-3.534-2.504-7.872-5.565-9.639L80.591,1.52 c-3.061-1.767-8.07-1.767-11.13,0L6.645,37.787c-3.061,1.767-5.565,6.105-5.565,9.639v72.534c0,3.534,2.504,7.872,5.565,9.639 l62.816,36.267c3.061,1.767,8.07,1.767,11.13,0L143.407,129.599z"/>
+         </clipPath>
+    </defs>
+    <image clip-path="url(#hex-510614782)" height="100%" width="100%" xlink:href="../../../../union.co.s3.amazonaws.com/content/profile-photos/1395264118.66d0fd491a20bbea7fd959313755e7b7.jpg" />
+</svg>        </a>
+    </span>
+</div>            </div>
+            <div class="col span9">
+                <div class="the-post">
+                                        <p>Hello, world &ndash; this is my first post! I&rsquo;ve learned a bunch since joining the Union (formerly Studiobanks) team three months ago. Lots of that learning has been dedicated to becoming accustomed to a new workplace (workflows, project history etc), but at least one universal pearl of wisdom comes to mind that I think would be helpful to lots of folks &ndash; testing Internet Explorer 6, 7, 8, and 9!</p>
+
+<p>Since we&rsquo;re all Mac here at the office, I&rsquo;ve become reasonably familiar with the process of setting up multiple virtual machines to provide a rock-solid (and free) testing environment on my local computer. I&rsquo;ve employed other techniques over the years (IETester, online screenshot services), but nothing comes close to having the actual browsers loaded in their own sandboxed environment. We&rsquo;ll achieve this by creating four separate virtual machines in VirtualBox.</p>
+
+<p>Additionally, we&rsquo;ll look at getting MAMP installed and configured so you can test your local sites inside the VMs <em>without having to constantly upload to an external server</em>. I love that part.</p>
+
+<h3>Goals</h3>
+
+<p>By the end of this guide, you should have the following items working:</p>
+
+<ul>
+ <li>MAMP &ndash; used to run Apache, MySQL, and PHP locally</li>
+ <li>VirtualBox &ndash; used to create the virtual machines that will run Windows / IE</li>
+ <li>A separate VM for each version of IE (6, 7, 8, 9)</li>
+ <li>A simple html file that you can access locally on your Mac and in all four VMs</li>
+</ul>
+
+<h3>Credit</h3>
+
+<p>I used three sites heavily when setting up my environment the first time. This guide is going to lean on them a lot. Credit is due to the following:</p>
+
+<ul>
+ <li>https://github.com/xdissent/ievms</li>
+ <li>http://jeffrey-parker.com/blog/dev/how-to-use-ie6-ie7-ie8-and-ie9-and-other-windows-apps-on-osx-lion-using-virtualbox-for-free-legally</li>
+ <li>http://osxdaily.com/2011/09/04/internet-explorer-for-mac-ie7-ie8-ie-9-free/</li>
+</ul>
+
+<h3>Setup</h3>
+
+<p>This guide is written from the perspective of OSX 10.6. Things may be a smidge different for other versions, but I expect this will give you a great head start. Let&rsquo;s get to it!</p>
+
+<p>The first piece of upkeep is to set up our folder structure. I like to keep all of my local websites organized in a single &ldquo;Sites&rdquo; folder in my User folder. I keep a shortcut to the Sites folder in my Finder sidebar so it&rsquo;s always just a click away. It&rsquo;s certainly possible to use another setup, but this guide is going to refer to Sites.</p>
+
+<p>Inside the Sites folder, create a subfolder called &ldquo;greatwebsite.local&rdquo; This is going to hold all of your site&rsquo;s files. Inside greatwebsite.local, create an index.php (or .html) file and put some kind of message in it (&ldquo;Hello world&rdquo; etc). This is just going to help us see that things are working down the road.</p>
+
+<p>You should end up with:</p>
+
+<p>/Users/USERNAME/Sites/greatwebsite.local/index.php</p>
+
+<h3>Apps</h3>
+
+<p>We&rsquo;ll be using these items. Hold off on downloading them all at once. I&rsquo;ll get to them individually:</p>
+
+<ul>
+ <li><a href="https://github.com/xdissent/ievms" target="_blank">IEVMS</a></li>
+ <li><a href="http://www.mamp.info/en/index.html" target="_blank">MAMP</a></li>
+ <li><a href="http://www.clockwise.ee/gasmask/" target="_blank">GasMask</a></li>
+ <li><a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">VirtualBox</a></li>
+</ul>
+
+<h3>IEVMS</h3>
+
+<p>Though we won&rsquo;t get to configuring this piece until a little later, this is really the meat-and-potatoes of what we&rsquo;re doing. GitHub user <a href="https://github.com/xdissent" target="_blank">Greg Thornton</a> has made this process infinitely simpler by providing readily available packages for each virtual machine you need to create. Not only do these packages provide a stable Windows install with the browsers pre-installed, but he&rsquo;s discovered that by using VirtualBox&rsquo;s Snapshot feature that we&rsquo;re able to run these installs forever, without having to worry about Windows registration or activation. Sound a little shady? Not to worry. These packages are based on virtual machines that Microsoft originally released for this very reason. The Snapshot feature simply allows us to return to a &ldquo;just installed&rdquo; state if the VM ever tries to force you to activate the OS. Huzzah!</p>
+
+<p>Mr. Thornton has provided four separate packages &ndash; one per browser for IE 6, 7, 8 and 9. It&rsquo;s possible to download all of these images at once, but I highly recommend grabbing them one at a time. They&rsquo;re pretty large and you don&rsquo;t want a download to fail in the middle and have to start over again.</p>
+
+<p><img alt="IEVM on GitHub" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/24.jpg" width="560" /></p>
+
+<p>So, go to the GitHub <a href="https://github.com/xdissent/ievms" target="_blank">project page</a> and see the Installation section. You&rsquo;ll want to copy the terminal command under item 2 for &ldquo;Install specific IE versions.&rdquo; Fire up Terminal, jog over to your User folder, and paste in the command. Then, edit the command to install ONLY IE6 (repeat for other versions). Your command should end up being:</p>
+
+<p>curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | IEVMS_VERSIONS=&quot;6&quot; bash</p>
+
+<p>Execute!</p>
+
+<p>You should see lots of text and a (probably slow) progress ticker that shows the package being downloaded. This is going to take a while, so we&rsquo;ll do some other setup in the meantime.</p>
+
+<h3>MAMP</h3>
+
+<p>MAMP is going to run Apache, MySQL, and PHP for you on your own machine. If you&rsquo;re already using MAMP, be sure to check your configuration and keep any differences in mind for later. This guide is going to make some customizations to the default preferences.</p>
+
+<p>You can get MAMP <a href="http://www.mamp.info/en/index.html" target="_blank">here</a>.</p>
+
+<p><img alt="MAMP preferences" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/25.jpg" width="560" /></p>
+
+<p>Once you&rsquo;ve got it installed in your Applications folder, go ahead and launch it. Once it&rsquo;s running, click the Preferences button and make these changes:</p>
+
+<ol>
+ <li>On the Ports tab, change the default port from 8888 to 80.</li>
+ <li>Next, click the Apache tab. Use the &ldquo;Select&rdquo; button to navigate to your Sites folder (or equivalent).</li>
+</ol>
+
+<p>Now we need to edit a few Apache configuration files. You&rsquo;ll want to open them in a text editor that shows line numbers. I prefer TextWrangler, but anything that shows line numbers will do. Take a deep breath:</p>
+
+<p><strong><em>Applications/MAMP/conf/apache/httpd.conf</em></strong></p>
+
+<p><img alt="Apache httpd.conf" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/26.jpg" width="560" /></p>
+
+<ol>
+ <li>Line 48: Change &ldquo;Listen 8888&quot; to &ldquo;Listen 80&quot;</li>
+ <li>Line 179: Change &ldquo;ServerName localhost:8888&quot; to &ldquo;ServerName localhost:80?</li>
+ <li>Line 199: Change &ldquo;AllowOverride None&rdquo; to &ldquo;AllowOverride All&rdquo;</li>
+ <li>Line 247: Add &ldquo;index.htm&rdquo; if you want to use that extension for your index file &#40;optional&#41;.</li>
+ <li>Line 346: Change &ldquo;AllowOverride None&rdquo; to &ldquo;AllowOverride All&rdquo;</li>
+ <li>Line 355: Change &ldquo;AllowOverride None&rdquo; to &ldquo;AllowOverride All&rdquo;</li>
+ <li>Line 364: Change &ldquo;AllowOverride None&rdquo; to &ldquo;AllowOverride All&rdquo;</li>
+ <li>Line 373: Change &ldquo;AllowOverride None&rdquo; to &ldquo;AllowOverride All&rdquo;</li>
+ <li>Line 403: Change &ldquo;AllowOverride None&rdquo; to &ldquo;AllowOverride All&rdquo;</li>
+ <li>Line 525: Uncomment this line (delete &ldquo;#&rdquo; at the beginning).</li>
+ <li>Save your file &#40;Control + S since you&rsquo;re in Windows&#41; and close it.</li>
+</ol>
+
+<p><strong><em>Applications/MAMP/conf/apache/extra/httpd-vhosts.conf</em></strong></p>
+
+<p><img alt="Apache httpd-vhost.conf" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/27.jpg" width="560" /></p>
+
+<ol>
+ <li>Copy the bottom-most block that begins with &ldquo;<virtualhost 1.="" :80="">&rdquo; and ends with &ldquo;</virtualhost>&rdquo; Paste that block at the bottom of the file.</li>
+ <li>Delete the lines for &ldquo;ServerAdmin,&rdquo; &ldquo;ServerAlias,&rdquo; &ldquo;ErrorLog,&rdquo; and &ldquo;CustomLog.&rdquo; You can use these lines for advanced configurations, but we don&rsquo;t need them.</li>
+ <li>You should be left with &ldquo;DocumentRoot&rdquo; and &ldquo;ServerName.&rdquo;</li>
+ <li>On the DocumentRoot line, change &ldquo;dummy-host2.example.com&rdquo; to &ldquo;greatwebsite.local&rdquo;</li>
+ <li>On the ServerName line, change &ldquo;dummy-host2.example.com&rdquo; to &ldquo;greatwebsite.local&rdquo;</li>
+ <li>Save your file &#40;Control + S&#41; and close it.</li>
+</ol>
+
+<p>That&rsquo;s it for MAMP. Go ahead and quit the application to get it out of the way.</p>
+
+<h3>GasMask</h3>
+
+<p>GasMask is a little application that makes it super easy to edit your machine&rsquo;s <em>hosts</em> file, which is responsible for telling your browser what IP address to associate with a domain name. In a local test environment, you need a unique entry for each site you want to test. Our testing URL is going to be &ldquo;greatwebsite.local.&rdquo; It&rsquo;s a good idea to develop a convention for your url extensions to keep things tidy. You don&rsquo;t have to use &ldquo;.local&rdquo; &ndash; whatever you choose, just make it consistent.</p>
+
+<p>Once GasMask is downloaded and installed, go ahead and launch it. You should see a line that says &ldquo;127.0.0.1 localhost.&rdquo;</p>
+
+<p><img alt="GasMask setup" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/28.jpg" width="560" /></p>
+
+<ol>
+ <li>Copy that line and paste it at the bottom of the document, underneath anything else you see.</li>
+ <li>Change &ldquo;localhost&rdquo; to &ldquo;greatwebsite.local&rdquo; (the url we&rsquo;re going to use to test our setup).</li>
+ <li>Be sure to SAVE your hosts file, then quit GasMask.</li>
+</ol>
+
+<h3>VirtualBox</h3>
+
+<p>VirtualBox is a free application developed by Oracle that allows you to create multiple instances of other operating systems. Each of these instances is called a virtual machine. We&rsquo;re going to end up with four virtual machines &ndash; one per browser that we need to test.</p>
+
+<p>By this point, your IE6 package should be finished downloading. You&rsquo;ll know it&rsquo;s done if you see &ldquo;Done&rdquo; and your bash prompt in the Terminal window. If it&rsquo;s not, go get a beverage, throw some darts, or maybe do a little vacuuming.</p>
+
+<p>This download will create a new folder called &ldquo;VirtualBox VMs&rdquo; in your user folder. There should also be an &ldquo;IE6? folder inside of the parent. If everything seems to be finished downloading and you&rsquo;ve got VirtualBox installed, go ahead and launch it.</p>
+
+<p><img alt="VirtualBox - IE6 only" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/29.jpg" width="560" /></p>
+
+<p>You should see an entry for &ldquo;IE6? in the left hand column. This represents the virtual machine that you&rsquo;re going to use to test IE6. Don&rsquo;t launch it yet! We need to customize a few things:</p>
+
+<p><img alt="VirtualBox Network Settings" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/30.jpg" width="560" /></p>
+
+<ol>
+ <li>Launch System Applications &gt; Network. Make a note of your IP Address (mine is 192.168.1.81) and the name of the active connection in the left column (mine is Ethernet 2).</li>
+ <li>Back in VirtualBox, select the IE6 VM and click the Settings button.</li>
+ <li>On Network &gt; Adapter 1, change &ldquo;Attached to:&rdquo; to &ldquo;Bridged Adapter&rdquo;</li>
+ <li>Change &ldquo;Name:&rdquo; to match the name of the active connection that you saw in System Preferences.</li>
+ <li>Expand the Advanced section, and change &ldquo;Adapter Type:&rdquo; to &ldquo;Intel PRO/1000 MT Desktop (82540EM).&rdquo;</li>
+ <li>Click OK to exit Settings.</li>
+</ol>
+
+<h3>Launch IE6 VM</h3>
+
+<p>Whew! That&rsquo;s a lot of reading and customizing. You&rsquo;re almost there. In VirtualBox with IE6 selected, click &ldquo;Start.&rdquo; When was the last time you saw Windows XP boot? It should be doing so now. Use &ldquo;Password1? to log in.</p>
+
+<p>If this is the first time you&rsquo;re launching VirtualBox, you&rsquo;ll probably see a notification about &ldquo;hotkeys.&rdquo; Basically, when you&rsquo;re working inside the VM, all your mouse and keyboard input is going to be applied to the VM. Use your hotkey (left Command) to escape the VM sandbox and get control of your mouse and keyboard back.</p>
+
+<p>You&rsquo;re going to be presented with lots of loud warnings about Windows not being activated and new hardware being detected. You shouldn&rsquo;t care about any of them &ndash; other than that you need to dismiss / cancel them as they appear. If you&rsquo;re asked to restart the system, refuse! So, just hit Cancel or No in the dialogs that appear until you&rsquo;re left with a an open text file on the desktop. Then, close that text file and we&rsquo;re ready to proceed.</p>
+
+<p><strong><em>Full-Screen Viewing</em></strong></p>
+
+<p>You&rsquo;ll probably notice that XP is running inside a cramped little window. We can fix that! The package you downloaded from GitHub contains a pre-mounted disk image called &ldquo;Guest Addons&rdquo; that will help you run the VM in full screen mode. When you&rsquo;re ready:</p>
+
+<ol>
+ <li>Hit your hotkey (left Command) to get control of your mouse back. Resize the main Mac window that your VM is running in to a better size</li>
+ <li>Back in the VM, click the Windows Start button</li>
+ <li>Head to Control Panel &gt; Display &gt; Settings tab</li>
+ <li>Under &ldquo;Screen resolution,&rdquo; move the slider to a reasonable size &ndash; whatever your monitor will support. I ended up using 1280 x 1024.</li>
+ <li>Hit Apply, then confirm the setting when asked.</li>
+ <li>Close all of the open windows &ndash; you should now be running close to full screen.</li>
+</ol>
+
+<p><strong><em>Network Drivers</em></strong></p>
+
+<p><img alt="IE6 Network Drivers" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/31.jpg" width="560" /></p>
+
+<p>For IE6 only, you need to install networking drivers to allow the VM to communicate with the Internet and your local computer. The GitHub package helps us out here too. The IE6 VM should already be loaded with &ldquo;drivers.iso&rdquo; mounted on its E: drive. To install the drivers:</p>
+
+<ol>
+ <li>Choose Start &gt; My Computer</li>
+ <li>Click &ldquo;Folders&rdquo; at the top of the window</li>
+ <li>Choose &ldquo;drivers (E:)&rdquo; from the left column</li>
+ <li>Double-click &ldquo;PRO2KXP&rdquo; to install the drivers</li>
+</ol>
+
+<p>You don&rsquo;t need to change any of the defaults during the install process. As soon as the install is finished, you can optionally eject the drivers.iso image from the E: drive just to keep things clean &ndash; you won&rsquo;t need it again.</p>
+
+<p><strong><em>Launch Internet Explorer 6</em></strong></p>
+
+<p>Now that the network drivers are installed, you should be able to connect to the Internet. Just select Start &gt; Internet Explorer and it should connect to good ol&rsquo; msn.com.</p>
+
+<p><strong><em>Configure Hosts File</em></strong></p>
+
+<p>Getting IE online is half the battle. The real point of all of this is to be able to test your local website directly in the VM without having to upload files to an external server. To do so, you need to edit the Hosts file. It&rsquo;s hidden in a deep dark corner of Windows, of course.</p>
+
+<p><em>C:\Windows\System32\drivers\etc\hosts</em></p>
+
+<p>Once you&rsquo;ve located that file, go ahead and right-click on it and choose &ldquo;Send To &gt; Desktop (create shortcut)&rdquo;. Find the shortcut on your desktop and open the file. Essentially, we&rsquo;re performing the same action as when we used GasMask to edit your Mac&rsquo;s Hosts file. But this time, instead of using 127.0.0.1 to point to greatwebsite.local, you need to use your Mac&rsquo;s internal IP address. You can find it in System Preferences &gt; Network if you didn&rsquo;t make a note of it earlier.</p>
+
+<p><img alt="IE6 Hosts file" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/32.jpg" width="560" /></p>
+
+<p>Back in the VM&rsquo;s hosts file, make a new line at the bottom of the file, enter your Mac&rsquo;s local IP, and then put in &ldquo;greatwebsite.local&rdquo; for the url you&rsquo;re going to use to test. For subsequent sites, you&rsquo;d just copy the &ldquo;greatwebsite.local&rdquo; line and update the url (to &ldquo;someothersite.local&rdquo; or whatever you want it to be called).</p>
+
+<p>SAVE the hosts file &#40;again, Control + S&#41;, then head back to IE. Enter &ldquo;greatwebsite.local&rdquo; for the url &ndash; hopefully you should see your &ldquo;Hello, world&rdquo; message.</p>
+
+<h3>How to Shut Down / Save Machine State</h3>
+
+<p>So now you&rsquo;re able to test. But what about when you want to close the VM? This is a bit non-intuitive. It&rsquo;s certainly <em>possible</em> to shut down the VM using the Start menu, but you should definitely avoid doing so. The great power of these GitHub packages is that they provide a way to use the VMs indefinitely. So instead of shutting down, you actually should &ldquo;Save Machine State&rdquo; whenever you want to exit a VM. Do do this:</p>
+
+<p><img alt="IE6 save machine state" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/33.jpg" width="560" /></p>
+
+<ol>
+ <li>Use the hotkey to get your mouse and keyboard back, focused on your Mac</li>
+ <li>Click the red close button in the upper left corner of the VM window</li>
+ <li>You should see a prompt with three choices</li>
+ <li>Choose &ldquo;Save the machine state&rdquo; and click OK</li>
+</ol>
+
+<p>The VM window will close and you&rsquo;ll be back in VirtualBox. The VM entry should say something like &ldquo;IE6 (clean) / Saved.&rdquo; This indicates two things:</p>
+
+<ul>
+ <li>&ldquo;(clean)&rdquo; refers to the original Snapshot, or the state of the VM when it was first installed. This is the magic trick for running the VM indefinitely. If you ever are unable to log in because Windows wants you to activate the software, this is the backup plan. Make sure the VM is closed, then go to VirtualBox and click the &ldquo;Snapshots&rdquo; button to view the available Snapshots. To restore the VM to its original state, select the &ldquo;clean&rdquo; entry and then click the &ldquo;Restore Snapshot&rdquo; button. You&rsquo;ll have to go through the whole VM configuration process again, but this should work forever.</li>
+ <li>&ldquo;Saved&rdquo; refers to the current machine state. When you launch the VM the next time, it will be just as you left it &ndash; analogous to Hibernate.</li>
+</ul>
+
+<p><img alt="Huzzah!" height="280" src="../../../../toolbox.studiobanks.com/content/v5.studiobanks.com/blog/hosted_photos/34.jpg" width="560" /></p>
+
+<p>The good news is that you&rsquo;re done configuring all the building blocks that you&rsquo;ll need from here on out. From here, you need to download the other versions of IE that you want to test. There really shouldn&rsquo;t be any other configuration that you need to do for the other browsers other than what&rsquo;s outlined above. Keep in mind that IE6 is the only browser for which you need to install the network drivers &ndash; the others should work out of the box.</p>
+
+<h3>Installing IE7 &ndash; 9</h3>
+
+<p>To get the other VMs set up, just run the terminal command again, making sure to edit it for the next browser that you want to install. So:</p>
+
+<ol>
+ <li>curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | IEVMS_VERSIONS=&rdquo;7? bash</li>
+ <li>curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | IEVMS_VERSIONS=&rdquo;8? bash</li>
+ <li>curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | IEVMS_VERSIONS=&rdquo;9? bash</li>
+</ol>
+
+<p>Again, I recommend running these one at a time to avoid putting all your eggs in the same download basket.</p>
+
+<p>After each one is finished downloading, you can return to VirtualBox and see that the new VM is available to launch.</p>
+
+<p>You can follow a similar procedure for each subsequent browser for adjusting the display resolution and editing the Hosts file. Here are the UI steps you&rsquo;ll need to follow for those (in case you&rsquo;re not familiar with Windows):</p>
+
+<ul>
+ <li>IE7: Start &gt; Control Panel &gt; Personalization &gt; Display Settings</li>
+ <li>IE8: Start &gt; Control Panel &gt; Appearance and Personalization &gt; Display &gt; Adjust Screen Resolution</li>
+ <li>IE9: Start &gt; Control Panel &gt; Display</li>
+</ul>
+
+<p>The Hosts file will always be located in the same place (C:\Windows\System32\drivers\etc).</p>
+
+<p>Here are abbreviated instructions for setting up the other VMs. If you&rsquo;ve gotten IE6 to work, these should be a breeze.</p>
+
+<p><strong><em>IE7</em></strong></p>
+
+<ol>
+ <li>Update Network Settings in VirtualBox control panel. Use Bridged Adapter and choose the same connection method you did for IE6 (mine is en1: Ethernet 2). Refer back to System Preferences &gt; Network if you can&rsquo;t remember what it is.</li>
+ <li>Start the VM</li>
+ <li>Choose the Administrator account and use &ldquo;Password1?</li>
+ <li>When you&rsquo;re asked to activate Windows, choose Activate Later</li>
+ <li>Cancel or close all of the subsequent messages (Found New Hardware, Set Network Location, Restart etc)</li>
+ <li>IE7 should be connected to the Internet at this point</li>
+ <li>Configure display settings, hosts file</li>
+ <li>When you want to close the VM, be sure to close the Mac window and choose &ldquo;Save Machine State&rdquo;</li>
+</ol>
+
+<p><strong><em>IE8</em></strong></p>
+
+<ol>
+ <li>Update Network Settings in VirtualBox control panel.</li>
+ <li>Start the VM</li>
+ <li>Administrator / Password1</li>
+ <li>This VM can take a while to load the first time. Be patient.</li>
+ <li>When you&rsquo;re asked to activate Windows, choose Activate Later</li>
+ <li>Cancel or close all of the subsequent messages (Found New Hardware, Set Network Location, Restart etc)</li>
+ <li>IE8 should be connected to the Internet at this point</li>
+ <li>Configure display settings, hosts file</li>
+ <li>When you want to close the VM, be sure to close the Mac window and choose &ldquo;Save Machine State&rdquo;</li>
+</ol>
+
+<p><strong><em>IE9</em></strong></p>
+
+<ol>
+ <li>Update Network Settings in VirtualBox control panel.</li>
+ <li>Start the VM</li>
+ <li>Administrator / Password1</li>
+ <li>This VM can take a while to load the first time. Be patient.</li>
+ <li>When you&rsquo;re asked to activate Windows, choose Activate Later</li>
+ <li>Cancel or close all of the subsequent messages (Found New Hardware, Set Network Location, Restart etc)</li>
+ <li>IE9 should be connected to the Internet at this point</li>
+ <li>Configure display settings, hosts file</li>
+ <li>For some reason this package contains tons of shortcuts on the Desktop. I deleted all of them except for IE9, Firefox, Chrome, and the shortcut to my hosts file.</li>
+ <li>When you want to close the VM, be sure to close the Mac window and choose &ldquo;Save Machine State&rdquo;</li>
+</ol>
+
+<h3>Conclusion</h3>
+
+<p>Yes, it&rsquo;s a lot of work. But I think it&rsquo;s well worth it. Here&rsquo;s what you&rsquo;ll gain:</p>
+
+<ul>
+ <li>The ability to test websites locally on your Mac</li>
+ <li>The ability to test local websites in Windows from your Mac</li>
+ <li>The ability to test local websites in real versions of Internet Explorer &ndash; no emulation</li>
+ <li>The ability to do all of this without having to upload your files to an external server</li>
+ <li>And, though I haven&rsquo;t mentioned it yet &ndash; you&rsquo;re able to install any other Windows browser in any of these VMs.</li>
+ <li>It&rsquo;s all free</li>
+</ul>
+
+<p>You&rsquo;ll of course become more familiar with the VM process, and pretty soon you won&rsquo;t think it&rsquo;s a big deal to revert to the (clean) snapshot.</p>
+
+<p>Thanks for reading, happy testing!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="boilerplate">
+    <div class="page-col">
+        <div class="row">
+            <div class="col span3 categories">
+                <div class="categories-header">Categories</div>
+                <ul>
+                <li><a href='../../category/strategy-insights/1.html'>Strategy Insights</a></li><li><a href='../../category/culture/2.html'>Culture</a></li><li><a href='../../category/tutorials/3.html'>Tutorials</a></li><li><a href='../../category/recent-work/4.html'>Recent Work</a></li><li><a href='../../category/company-news/5.html'>Company News</a></li>                </ul>
+            </div>
+            <div class="col span9">
+                <strong>About Union</strong>  
+                <p>Union is a digital marketing agency founded in 2002 and headquartered in Charlotte, NC. Considered a digital marketing leader, Union collaborates with many of the Southeast region's top brands to achieve business objectives through strategy, creative and technology. The agency specializes in crafting digital marketing platforms, content, and campaigns that deliver meaningful and measurable ROI results. Want to work with us?</p>
+                <a href="#contact-form" class="btn-hollow show-modal">Get&nbsp;in&nbsp;Touch</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ankle more-posts">
+            <span class="module-heading">Also found in <a href="../../category/tutorials/3.html">Tutorials</a></span>
+        <div class="page-col page-col-narrow">
+                    <div class="post-snippet">
+                <h2 class="heading">
+                    <a href="../how-to-prepare-your-email-marketing-for-the-holiday-season/312.html">How to Prepare Your Email Marketing for the Holiday Season</a> &mdash;
+                </h2>
+                <p>
+                    For most of the world, the coming holiday season means scheduling travel and parties, with a bit of shopping and vacation time thrown into the...                </p>
+                <div class="post-category-author">
+                    <span class="post-category">
+                        In <a href="../../category/tutorials/3.html">Tutorials</a>
+                    </span>
+                    <span class="post-author">
+                        by
+                        <a href="../../author/matt-ashbridge/20.html" class="post-author-name">
+                            Matt Ashbridge                        </a>
+                    </span>
+                </div>
+            </div>
+                    <div class="post-snippet">
+                <h2 class="heading">
+                    <a href="../measuring-social-media-roi/293.html">Measuring Social Media ROI</a> &mdash;
+                </h2>
+                <p>
+                    In October of 2012, Facebook reached a cool one billion users. Twitter has continued to grow as well, showing an increase in active users by...                </p>
+                <div class="post-category-author">
+                    <span class="post-category">
+                        In <a href="../../category/tutorials/3.html">Tutorials</a>
+                    </span>
+                    <span class="post-author">
+                        by
+                        <a href="../../author/union/1.html" class="post-author-name">
+                            Union                        </a>
+                    </span>
+                </div>
+            </div>
+                    <div class="post-snippet">
+                <h2 class="heading">
+                    <a href="../how-to-get-hired-right-out-of-school/283.html">How to get hired right out of school</a> &mdash;
+                </h2>
+                <p>
+                    Last week I had the opportunity to speak with local design students about life after graduation. AIGA Charlotte asked that I join other local design...                </p>
+                <div class="post-category-author">
+                    <span class="post-category">
+                        In <a href="../../category/tutorials/3.html">Tutorials</a>
+                    </span>
+                    <span class="post-author">
+                        by
+                        <a href="../../author/banks-wilson/3.html" class="post-author-name">
+                            Banks Wilson                        </a>
+                    </span>
+                </div>
+            </div>
+            </div>
+</div>
+<div id="contact-form" class="contact-form m_modal">
+    <div class="page-col form-wrapper" data-form-wrapper>
+        
+                    <h3 class="heading">
+                New Business Inquiries
+                <span class="footnote">Fill out this form and we'll contact you to schedule a time to talk!</span>
+            </h3>
+                <div class="pill-tab-content">
+            <div id="detailed-form">
+                <form action="http://union.co/contact" method="post" id="detailed-form">
+                    <div class="row">
+                        <div class="col span6 col-name">
+                            <div class="col span6 col-first">
+                                <label for="df_fname"><span class="required">*</span>First</label>
+                                <input name="df_fname" id="df_fname"  type="text" value="">
+                                                            </div>
+                            <div class="col span6 col-last">
+                                <label for="df_lname"><span class="required">*</span>Last</label>
+                                <input name="df_lname" id="df_lname"  type="text" value="">
+                                                            </div>
+                        </div>
+                        <div class="col no-margin span6 col-company">
+                            <label for="df_company">Company</label>
+                            <input name="df_company" id="df_company" type="tel" value="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span6 col-email">
+                            <label for="df_email"><span class="required">*</span>Email</label>
+                            <input name="df_email" id="df_email"  type="email" value="">
+                                                    </div>
+                        <div class="col no-margin span6 col-phone">
+                            <label for="df_phone">Phone</label>
+                            <input name="df_phone" id="df_phone" type="tel" value="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col span12 col-services">
+                            <p class="prompt">
+                                Which digital marketing services are you interested in?
+                            </p>
+                                                        <input type="checkbox" name="df_services[Interested in Platforms]" id="df_services1" value="Yes" >
+                            <label for="df_services1">Platforms</label>
+                            <input type="checkbox" name="df_services[Interested in Campaigns]" id="df_services2" value="Yes" >
+                            <label for="df_services2">Campaigns</label>
+                            <input type="checkbox" name="df_services[Interested in Content]" id="df_services3" value="Yes" >
+                            <label for="df_services3">Content</label>
+                        </div>
+                                            </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="df_comments"><span class="required">*</span>Tell us a little about what you are looking for:</label>
+                            <textarea name="df_comments" id="df_comments" ></textarea>
+                                                    </div>
+                    </div>
+                    <input type="hidden" name="form_check" value="1">
+                    <input type="hidden" name="contact_type" value="Prospective Client">
+                    <div id="my_name_wrap" style="display:none;">
+    <input id="my_name" name="my_name" type="text" value="">  
+    <input name="my_time" type="hidden" value="eyJpdiI6Inl2cjRJVkFWWGZ3WHB3SEpHR3plZ2k0V1B6QUNSQjAyeFBpU0hBN1lmRjg9IiwidmFsdWUiOiJVeUFTczh0ZktyektjakorUzJQWWsyMVJNMGZkbFF0WnB4c2NQRlRpUVdnPSIsIm1hYyI6ImQyMTk4MzcwYzY5NGE2YmI1ZGRiMjA2ZWNlY2MyMDViYzM2NmE2YTNhZDY2ZDU0YWRhYWI1ZWE3MjVhODgwMTMifQ==">
+</div>                                        <input type="hidden" name="success_route" value="eyJpdiI6InlGR0hMNTMzUFEzTHk1RWthTTR0NnlxZk9VSllKWXZNb042S3VoSEJJT2c9IiwidmFsdWUiOiJpa3lwcHpDek1MSGk1dHZOZ3ErUldhNjFuaE5GVk1wS1JCM28wcmdmY2VLOEI0S21sOWxcL0ZIZE9tUVE4bHR2VEhIS0FYMEtBMkxKd2xCeWcwY2RjZlE9PSIsIm1hYyI6IjdmMGNlNzQwNGYwN2U0NTZjNDYwMjY1YTVhMTk3Mjc0NDQwY2IyZmEyNTZjZjk3ZDJlZTU5OWYzMDM0ODEzNTIifQ==">
+                                        <button type="submit" class="btn">Send</button>
+                </form>
+                <script type="text/javascript">
+                    var __ss_noform = __ss_noform || [];
+                    __ss_noform.push(['baseURI', 'https://app-J7UCQM.sharpspring.com/webforms/receivePostback/szQ2BwA/']);
+                    __ss_noform.push(['endpoint', '83ca4172-f018-4b88-a993-7f1f891ac770']);
+                </script>
+                <script type="text/javascript" src="../../../../koi-j7ucqm.sharpspring.com/client/noform5152.js?ver=1.0" ></script>
+            </div>
+        </div>
+    </div>
+</div>			</div>
+		<div class="tmp_footer">
+    <div class="page-col">
+        <div class="flex">
+            <div class="flex-cell copyright">
+                <div class="standalone-bolt" data-inlinesvg="http://union.co/assets/img/svg/bolt.svg?v=0.3"></div>
+                &copy; 2014 Union, LLC
+                <div class="privacy-policy">
+                    <span class="standalone-bolt"></span>
+                    <small class="privacy"><a href="../../../privacy.html">Privacy</a></small>
+                </div>
+            </div>
+            <div class="flex-cell address">421 Penman Street, Suite 310, Charlotte, NC 28203<span class="divider">/</span>Phone: 704.335.5424<span class="divider">/</span><a href="../../../contact.html">Contact</a></div>
+            <div class="flex-cell social-wrapper">
+                <div class="social">
+    <a href="https://www.facebook.com/UnionDotCo" target="_blank" tabindex="-1">
+        <i class="icon-facebook" data-inlinesvg="http://union.co/assets/img/svg/icon-facebook.svg?v=0.3">F</i>
+    </a>
+    <a href="https://twitter.com/UnionDotCo" target="_blank" tabindex="-1">
+        <i class="icon-twitter" data-inlinesvg="http://union.co/assets/img/svg/icon-twitter.svg?v=0.3">T</i>
+    </a>
+    <a href="http://instagram.com/UnionDotCo" target="_blank" tabindex="-1">
+        <i class="icon-instagram" data-inlinesvg="http://union.co/assets/img/svg/icon-instagram.svg?v=0.3">I</i>
+    </a>
+</div>            </div>
+        </div>
+    </div>
+</div>		</div>
+	</div>
+
+	<div id="st-container" class="st-container st-effect-9">
+		<div class="st-menu st-effect-9">
+    <nav role="navigation">
+        <ul class="pages unstyled">
+            <li>
+                <a class="page " href="../../../work.html">Work</a>
+                <ul class="nested unstyled">
+                    <li class="case-study">
+                        <a href="../../../work/mccoll-center.html"  tabindex="-1">McColl Center</a>
+                    </li>
+                    <li class="case-study">
+                        <a href="../../../work/pamlico-capital.html"  tabindex="-1">Pamlico Capital</a>
+                    </li>
+                    <li class="case-study">
+                        <a href="../../../work/crown-royal.html"  tabindex="-1">Crown Royal</a>
+                    </li>
+                    <li class="case-study">
+                        <a href="../../../work/dublin-dog.html"  tabindex="-1">Dublin Dog</a>
+                    </li>
+                    <li class="case-study">
+                        <a href="../../../work/amcc.html"  tabindex="-1">AMCC</a>
+                    </li>
+                    <li class="case-study">
+                        <a href="../../../work/duke-energy.html"  tabindex="-1">Duke Energy</a>
+                    </li>
+                    <li class="case-study">
+                        <a href="../../../work/bojangles.html"  tabindex="-1">Bojangles’</a>
+                    </li>
+                    <li class="case-study last">
+                        <a href="../../../work/hendrick.html"  tabindex="-1">Hendrick</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="page">
+                <a href="../../../services.html"  tabindex="-1">Services</a>
+            </li>
+            <li class="page">
+                <a href="../../../about.html"  tabindex="-1">About</a>
+            </li>
+            <li class="page">
+                <a href="../../../blog.html" class="current" tabindex="-1">Blog</a>
+            </li>
+            <li class="page">
+                <a href="../../../contact.html"  tabindex="-1">Contact</a>
+            </li>
+        </ul>
+        <div class="social">
+    <a href="https://www.facebook.com/UnionDotCo" target="_blank" tabindex="-1">
+        <i class="icon-facebook" data-inlinesvg="http://union.co/assets/img/svg/icon-facebook.svg?v=0.3">F</i>
+    </a>
+    <a href="https://twitter.com/UnionDotCo" target="_blank" tabindex="-1">
+        <i class="icon-twitter" data-inlinesvg="http://union.co/assets/img/svg/icon-twitter.svg?v=0.3">T</i>
+    </a>
+    <a href="http://instagram.com/UnionDotCo" target="_blank" tabindex="-1">
+        <i class="icon-instagram" data-inlinesvg="http://union.co/assets/img/svg/icon-instagram.svg?v=0.3">I</i>
+    </a>
+</div>    </nav>
+</div>
+		<div class="st-pusher"></div>
+		<div id="featured-posts">
+    <div class="featured-content">
+        <div class="blog-content">
+            <span class="heading">From Our Blog</span>
+                        <article>
+                <a href="../third-thursdays-at-union/373.html" class="post-title">
+                    Third Thursdays At Union                </a>
+                <p class="meta">Aug 22, 2014 in <a href="../../category/culture/2.html">Culture</a></p>
+            </article>
+                        <article>
+                <a href="../we-are-union/363.html" class="post-title">
+                    We Are Union                </a>
+                <p class="meta">Aug 11, 2014 in <a href="../../category/company-news/5.html">Company News</a></p>
+            </article>
+                        <article>
+                <a href="../union-launches-new-digital-platform-for-bama/372.html" class="post-title">
+                    Union Launches New Digital Platform for BAMA                </a>
+                <p class="meta">Aug 08, 2014 in <a href="../../category/recent-work/4.html">Recent Work</a></p>
+            </article>
+                    </div>
+        <div class="twitter-content">
+            <span class="avatar"></span>
+            <div class="tweet">
+                <span class="the-tweet">
+                     RT @mattmade: Thou shalt not schedule a meeting during an apple keynote.                </span>
+                <a href="https://twitter.com/uniondotco" class="posted-by">@UnionDotCo</a>
+                <span class="ago">33 minutes ago</span>
+                 
+            </div>
+        </div>
+    </div>
+</div>	</div>
+
+	<button id="tmp_close" class="close" data-inlinesvg="http://union.co/assets/img/svg/icon-close.svg?v=0.3"></button>
+
+	<script src="../../../../ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../../assets/js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
+
+	<!--[if lte IE 8]>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="http://union.co/assets/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+	<![endif]-->
+
+	<script src="../../../assets/js/vendor/jquery/cookie-1.4.1.min.js"></script>
+	<script src="../../../assets/js/vendor/jquery/easing-1.3.min.js"></script>
+	<script src="../../../assets/js/vendor/jquery/color-2.1.2.min.js"></script>
+	<script src="../../../assets/js/vendor/jquery/bxslider-4.1.2.min.js"></script>
+	<script src="../../../assets/js/vendor/jquery/scrollto-1.4.11.min.js"></script>
+	<script src="../../../assets/js/vendor/jquery/fitvids-1.1.0.min.js"></script>
+	<script src="../../../assets/js/vendor/jquery/throttledresize.min.1408530321.js"></script>
+	<script src="../../../assets/js/app.min.1409079685.js"></script>
+</body>
+
+<!-- Mirrored from union.co/blog/post/crafting-your-windows-ie-test-environment-on-osx-106/279 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Sep 2014 19:16:21 GMT -->
+</html>
